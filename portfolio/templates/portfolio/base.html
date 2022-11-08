@@ -7,6 +7,20 @@
 
     <link rel="icon" type="image/jpg" href="{% static 'portfolio/icon.jpg' %}">
     <title>Serhii Sokhatskyi</title>
+    <style>
+    h1 {
+        color: Green;
+    }
+
+    div.scroll {
+        margin: 4px, 4px;
+        padding: 4px;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+    </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
   <body>
@@ -31,7 +45,7 @@
               <a class="nav-link" href="https://www.linkedin.com/in/serhii-sokhatskyi-4a6394163/">My Linkedin</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% static 'portfolio/general_agreement.pdf' %}">General Agreement</a>
+              <a class="nav-link disabled" href="{% static 'portfolio/general_agreement.pdf' %}">Resume</a>
             </li>
           </ul>
         </div>
