@@ -8,10 +8,6 @@
     <link rel="icon" type="image/jpg" href="{% static 'portfolio/icon.jpg' %}">
     <title>Serhii Sokhatskyi</title>
     <style>
-    h1 {
-        color: Green;
-    }
-
     div.scroll {
         margin: 4px, 4px;
         padding: 4px;
@@ -19,6 +15,44 @@
         overflow-x: auto;
         overflow-y: hidden;
         white-space: nowrap;
+    }
+    div.inline {
+      display: inline-block;
+    }
+    div.borderere {
+      border: 3px solid lightgray;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    div.scroll::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    }
+
+    div.scroll::-webkit-scrollbar-track {
+      -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+      background-color: #f9f9fd;
+      border-radius: 10px;
+    }
+
+    div.scroll::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: lightgray;
+    }
+    body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    }
+
+    body::-webkit-scrollbar-track {
+      -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+      background-color: #f9f9fd;
+      border-radius: 10px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: gray;
     }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">

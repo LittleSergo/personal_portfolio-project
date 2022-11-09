@@ -21,9 +21,9 @@
       </div>
       <hr size=75%>
 
-      <div class="row scroll">
+      <div class="row scroll inline borderere">
         {% for project in projects %}
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6 inline">
               {% if project.url %}
                 <a href="{{ project.url }}"><image src='{{ project.image.url}}' width=400></a>
               {% else %}
