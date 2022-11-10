@@ -1,43 +1,42 @@
 {% extends 'portfolio/base.html' %}
 
 {% block content %}
-
-    <div class="container text-center">
-
-
-      {% load static %}
-
+{% load static %}
+<link href="{% static 'portfolio/home.css' %}" rel="stylesheet" type="text/css">
+<div class="container text-center">
+  <br>
+  <h1>My site-portfolio</h1>
+  <br>
+  <img src="{% static 'portfolio/me_out_of_focus.jpg' %}">
+  <div class="row justify-content-center mb-3">
+    <div class="col-md-9 text-center">
       <br>
-
-      <img src="{% static 'portfolio/me_out_of_focus.jpg' %}">
-
-      <div class="row justify-content-center mb-3">
-        <div class="col-md-9 text-center">
-
-        <br>
-        <h2>Little man who wants changes 😍</h2>
-        <br>
-        </div>
-      </div>
-      <hr size=75%>
-
-      <div class="row scroll inline borderere">
-        {% for project in projects %}
-          <div class="col-lg-4 col-md-6 inline">
-              {% if project.url %}
-                <a href="{{ project.url }}"><image src='{{ project.image.url}}' width=400></a>
-              {% else %}
-                <image src='{{ project.image.url }}' width=400>
-              {% endif %}
-              <h2>{{ project.title }}</h2>
-              <p>{{ project.discription }}</p>
-
-          </div>
-
-        {% endfor %}
-      </div>
-
-
+      <h2>Little man who wants changes 😍</h2>
+      <br>
     </div>
+  </div>
+  <hr size=75%>
+</div>
+<div class="main">
+  <h2 class="gray" align=center>My projects:</h2>
+  <br>
+  <div class="container scroll">
+    <table>
+      <tr>
+        {% for project in projects %}
+        <td><div>
+          {% if project.url %}
+          <a href="{{ project.url }}"><image src='{{ project.image.url}}' width=400></a>
+          {% else %}
+          <image src='{{ project.image.url }}' width=400>
+          {% endif %}
+          <h2 class="gray">{{ project.title }}</h2>
+          <p class="gray">{{ project.discription }}</p>
+        </div></td>
+        {% endfor %}
+      </tr>
+    </table>
+  </div>
+</div>
 
 {% endblock %}
