@@ -1,0 +1,24 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+<link href="{% static 'portfolio/all_projects.css' %}" rel="stylesheet" type="text/css">
+<div class="main">
+  <div class="container text-center content">
+
+    <h1>Here you can see all my projects</h1>
+    <br>
+    <br>
+
+    {% for project in projects %}
+    <div class="bordering">
+      <a href="{% url 'portfolio:proj_detail' project.id %}"><image src='{{ project.image.url}}' width=100%></a>
+      <h2 class="gray">{{ project.title }}</h2>
+      <p class="gray">{{ project.discription|striptags|truncatechars:100 }}</p>
+    </div>
+    <br>
+    {% endfor %}
+
+  </div>
+</div>
+{% endblock %}

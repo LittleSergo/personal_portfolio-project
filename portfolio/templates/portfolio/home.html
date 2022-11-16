@@ -25,18 +25,15 @@
       <tr>
         {% for project in projects %}
         <td><div>
-          {% if project.url %}
-          <a href="{{ project.url }}"><image src='{{ project.image.url}}' width=400></a>
-          {% else %}
-          <image src='{{ project.image.url }}' width=400>
-          {% endif %}
+          <a href="{% url 'portfolio:proj_detail' project.id %}"><image src='{{ project.image.url}}' width=400></a>
           <h2 class="gray">{{ project.title }}</h2>
-          <p class="gray">{{ project.discription }}</p>
+          <p class="gray">{{ project.discription|striptags|truncatechars:100 }}</p>
         </div></td>
         {% endfor %}
       </tr>
     </table>
   </div>
+  <p class="align" align=right><a class="btn btn-primary" href="{% url 'portfolio:all_projects' %}" align='right'>All projects</a></p>
 </div>
 
 {% endblock %}

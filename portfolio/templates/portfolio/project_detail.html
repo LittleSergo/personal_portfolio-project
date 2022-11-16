@@ -1,0 +1,14 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+{% load static %}
+<link href="{% static 'portfolio/project_detail.css' %}" rel="stylesheet" type="text/css">
+<div class="main">
+  <div class="container text-center content">
+    <h1>{{ project.title }}</h1>
+    <img src="{{ project.image.url }}" width=80%>
+    <h2 style="color: gray">Was made on {{ project.date|date:'F jS Y' }}</h2>
+    <p>{{ project.discription|safe }}</p>
+  </div>
+</div>
+{% endblock %}

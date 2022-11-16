@@ -1,0 +1,22 @@
+div.bordering {
+  border: 3px solid gray;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+div.bordering:hover {
+  border: 3px solid black;
+}
+
+div.main {
+  width: 60%;
+  background-color: lightgray;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+div.content {
+  width: 90%
+}
